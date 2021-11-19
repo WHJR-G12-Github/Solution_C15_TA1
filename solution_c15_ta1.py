@@ -53,7 +53,7 @@ def eval_fitness(generation, config):
    
     for gid, genome in generation: 
         # Creating a neural network using 'neat' library and pass 'genome' , 'config' as arguments. Naming it as 'net'
-        net = neat.nn.FeedForwardNetwork.create(genome, config) #creating a neural network for a genome
+        net = neat.nn.FeedForwardNetwork.create(genome, config)
         pipe1 = Pipe(250)
         bird1 = Bird() 
         
@@ -73,7 +73,7 @@ def eval_fitness(generation, config):
                     if event.key == pygame.K_SPACE:
                         bird1.moveup()
                         
-            genome.fitness += 0.1         
+                
             pipe1.display()
             bird1.movedown()
             bird1.display()
